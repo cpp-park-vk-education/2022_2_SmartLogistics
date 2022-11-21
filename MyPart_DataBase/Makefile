@@ -11,10 +11,10 @@ ARCHIVER=ar
 all: format check build_lib build_test run_test make_report cleanup
 
 format:
-	$(SCRIPTS)/format.sh
+	bash $(SCRIPTS)/format.sh
 
 check:
-	$(SCRIPTS)/check.sh
+	bash $(SCRIPTS)/check.sh
 
 build_lib:
 	#$(COMPILER) $(COMPILER_FLAGS) -c $(SOURCES)/dbhelper.cpp -o $(BINARIES)/dbhelper.o
