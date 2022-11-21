@@ -21,15 +21,15 @@ jobs:
           sudo pip install cpplint
           sudo apt install python
       - name: check
-        run: make check
+        run: make -C ./MyPart_DataBase check
       - name: build_lib
-        run: make build_lib
+        run: make -C ./MyPart_DataBase build_lib
       - name: build_test
-        run: make build_test
+        run: make -C ./MyPart_DataBase build_test
       - name: run_test
-        run: make run_test
+        run: make -C ./MyPart_DataBase run_test
       - name: make_report
-        run: make make_report
+        run: make -C ./MyPart_DataBase make_report
       - name: publish_lib
         uses: actions/upload-artifact@v3
         with:
