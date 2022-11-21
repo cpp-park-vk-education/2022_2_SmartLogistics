@@ -4,8 +4,8 @@
 #include <string>
 #include <gtest/gtest.h>
 
-std::vector<std::vector<std::string>>
-DBHelper::SendQuery(std::string query)
+
+void DBHelper::SendQuery(std::string query)
 {
     MYSQL* connection;
     connection = mysql_init(NULL);

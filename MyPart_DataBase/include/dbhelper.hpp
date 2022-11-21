@@ -15,8 +15,9 @@ private:
 	std::string User;
 	std::string password;
 	std::string port;
-	std::string databade;
-	std::vector<std::vector<std::string>> SendQuery(std::string query);
+	std::string database;
+	/*std::vector<std::vector<std::string>>*/
+	void SendQuery(std::string query);
 
 
 public:
