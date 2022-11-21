@@ -1,7 +1,7 @@
 name: CI_KateChur
 on: [push, pull_request]
 jobs:
-  CI_Katechur:
+  CI_KateChur:
     runs-on: ubuntu-20.04
     steps:
       - name: checkout
