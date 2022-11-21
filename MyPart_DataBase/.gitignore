@@ -1,0 +1,7 @@
+build/*
+!build/.gitempty
+lib/*
+!lib/.gitempty
+test/*
+!test/main.cpp
+!test/CMakeLists.txt
