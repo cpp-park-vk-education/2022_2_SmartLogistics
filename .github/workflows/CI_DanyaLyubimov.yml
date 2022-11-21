@@ -21,11 +21,9 @@ jobs:
           sudo pip install cpplint
           sudo apt install python
       - name: check
-        run: make -C check
+        run: make check
       - name: build_lib
         run: make build_lib
-      - name: make_report
-        run: make make_report
       - name: publish_lib
         uses: actions/upload-artifact@v3
         with:
