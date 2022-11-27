@@ -21,12 +21,12 @@ build_lib:
 	#$(ARCHIVER) -crv $(LIBRARIES)/dbhelper.a $(BINARIES)/dbhelper.o
 	cd build && cmake ../CMakeLists.txt && cmake --build .
 
-build_test:
+#build_test:
 	#$(COMPILER) $(COMPILER_FLAGS) -c $(SOURCES)/dbhelper.cpp -o $(BINARIES)/dbhelper.o -coverage -lpthread -lgcov
 	#$(COMPILER) $(COMPILER_FLAGS) -c $(TEST)/main.cpp -o $(BINARIES)/main.o -lgtest -lpthread
 	#$(COMPILER) $(COMPILER_FLAGS) $(BINARIES)/main.o $(BINARIES)/dbhelper.o -o $(TEST)/Test -lgtest -lpthread -coverage -lgcov
-	cd test && cmake ./CMakeLists.txt && cmake --build .
-	cp ./build/lib* ./lib
+	#cd test && cmake ./CMakeLists.txt && cmake --build .
+	#cp ./build/lib* ./lib
 
 run_test:
 	valgrind $(TEST)/Test
