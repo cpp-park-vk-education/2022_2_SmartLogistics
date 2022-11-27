@@ -8,7 +8,7 @@ BINARIES=./build
 #COMPILER_FLAGS=-Wall -Werror -o2 -I $(INCLUDE) -L $(LIBRARIES)
 ARCHIVER=ar
 
-all: format check build_lib build_test run_test make_report cleanup
+all: format check build_lib run_test make_report cleanup
 
 format:
 	bash $(SCRIPTS)/format.sh
