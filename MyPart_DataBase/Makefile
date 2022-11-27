@@ -22,7 +22,7 @@ build_lib:
 	cd build && cmake ../CMakeLists.txt && cmake --build .
 
 run_test:
-	valgrind $(TEST)/Test
+	valgrind $(TEST)/test
 
 make_report:
 	lcov -t $(TEST)/Test -o $(TEST)/coverage_report.info -c -d $(TEST)
