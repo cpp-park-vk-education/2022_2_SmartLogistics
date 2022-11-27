@@ -8,7 +8,7 @@ BINARIES=./build
 #COMPILER_FLAGS=-Wall -Werror -o2 -I $(INCLUDE) -L $(LIBRARIES)
 ARCHIVER=ar
 
-all: format check build_lib run_test make_report cleanup
+all: format check build_lib make_report cleanup
 
 format:
 	bash $(SCRIPTS)/format.sh
@@ -21,8 +21,6 @@ build_lib:
 	#$(ARCHIVER) -crv $(LIBRARIES)/dbhelper.a $(BINARIES)/dbhelper.o
 	cd build && cmake ../CMakeLists.txt && cmake --build .
 
-run_test:
-	valgrind $(TEST)/test
 
 make_report:
 	lcov -t $(TEST)/Test -o $(TEST)/coverage_report.info -c -d $(TEST)
