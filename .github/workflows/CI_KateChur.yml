@@ -24,8 +24,6 @@ jobs:
         run: make -C ./MyPart_DataBase/ check
       - name: build_lib
         run: make -C ./MyPart_DataBase/ build_lib
-      - name: build_test
-        run: make -C ./MyPart_DataBase/ build_test
       - name: run_test
         run: make -C ./MyPart_DataBase/ run_test
       - name: make_report
