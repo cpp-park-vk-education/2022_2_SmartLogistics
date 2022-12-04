@@ -3,7 +3,7 @@ INCLUDE=./include
 SOURCES=./src
 BINARIES=./build
 #LIBRARIES=./lib
-#TEST=./test
+TEST=./test
 #COMPILER=g++
 #COMPILER_FLAGS=-Wall -Werror -o2 -I $(INCLUDE) -L $(LIBRARIES)
 ARCHIVER=ar
@@ -22,7 +22,7 @@ build_lib:
 	cd build && cmake ../CMakeLists.txt && cmake --build .
 
 
-#make_report:
+make_report:
 	#lcov -t $(TEST)/Test -o $(TEST)/coverage_report.info -c -d $(TEST)
 	#genhtml -o $(TEST)/coverage_report $(TEST)/coverage_report.info
 
