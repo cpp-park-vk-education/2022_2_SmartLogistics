@@ -1,28 +1,17 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.18.4)
+project(testing)
 
-project(HardCarry)
+set(CMAKE_EXE_LINKER_FLAGS "-coverage -lgcov")
 
+file(GLOB SOURCE main.cpp)
+file(GLOB INCLUDE_DIRS "../include")
 find_package(GTest REQUIRED)
 
-set(SOURCE_FILES
-        ./main.cpp
-        ../src/dbhelper.cpp
-   )
+add_executable(${PROJECT_NAME} ${SOURCE})
+target_include_directories(${PROJECT_NAME} PUBLIC ${INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} GTest::gtest_main)
 
-set(INCLUDE_DIR
-        ../include
-   )
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lpthread -lgtest -lgcov -fPIC")
-
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lgtest -lpthread -lgcov -fPIC")
-
-add_executable(Test ${SOURCE_FILES})
-
-set_property(SOURCE ../src/dbhelper.cpp APPEND PROPERTY COMPILE_OPTIONS "-coverage")
-
-target_include_directories(Test PUBLIC ${INCLUDE_DIR} ${GTEST_INCLUDE_DIRS})
-
-target_link_directories(Test PUBLIC .)
-
-target_link_libraries(Test PUBLIC ${GTEST_LIBRARIES} pthread gcov gtest)
+add_test(
+    NAME ${PROJECT_NAME}
+     COMMAND ${PROJECT_NAME}
+)

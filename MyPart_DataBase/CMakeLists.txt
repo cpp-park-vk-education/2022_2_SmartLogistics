@@ -1,21 +1,13 @@
 cmake_minimum_required(VERSION 3.18.4)
+project(SmartLogistics)
 
-project(HardCarry)
+set(CMAKE_CXX_FLAGS "-Wall -Wpedantic -Werror")
 
-set(SOURCE_FILES
-        ./src/dbhelper.cpp
-   )
+file(GLOB SOURCE "./src/*.cpp")
+file(GLOB INCLUDE_DIRS "include")
 
-set(INCLUDE_DIR
-        ./include
-   )
+add_executable(${PROJECT_NAME} ${SOURCE})
+target_include_directories(${PROJECT_NAME} PUBLIC ${INCLUDE_DIRS})
 
-add_library(dbhelper STATIC ${SOURCE_FILES})
-
-set(CXX_PROPERTIES
-        CXX_STANDARD 20
-   )
-
-target_include_directories(dbhelper PUBLIC ${INCLUDE_DIR})
-
-set_target_properties(dbhelper PROPERTIES ${CXX_PROPERTIES})
+enable_testing()
+add_subdirectory(test)
