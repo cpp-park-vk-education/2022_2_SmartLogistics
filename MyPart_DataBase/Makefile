@@ -22,9 +22,9 @@ build_lib:
 	cd build && cmake ../CMakeLists.txt && cmake --build .
 
 
-make_report:
-	lcov -t $(TEST)/Test -o $(TEST)/coverage_report.info -c -d $(TEST)
-	genhtml -o $(TEST)/coverage_report $(TEST)/coverage_report.info
+#make_report:
+	#lcov -t $(TEST)/Test -o $(TEST)/coverage_report.info -c -d $(TEST)
+	#genhtml -o $(TEST)/coverage_report $(TEST)/coverage_report.info
 
 cleanup:
 	rm -r $(BINARIES)/CMakeFiles
