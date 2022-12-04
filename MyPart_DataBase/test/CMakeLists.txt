@@ -3,7 +3,7 @@ project(testing)
 
 set(CMAKE_EXE_LINKER_FLAGS "-coverage -lgcov")
 
-file(GLOB SOURCE main.cpp)
+file(GLOB SOURCE test.cpp)
 file(GLOB INCLUDE_DIRS "../include")
 find_package(GTest REQUIRED)
 
