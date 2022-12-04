@@ -48,3 +48,7 @@ class Logic
 		return NewMessages;
 	}
 };
+
+int main(){
+    return 1;
+}
