@@ -2,10 +2,10 @@ SCRIPTS=./scripts
 INCLUDE=./include
 SOURCES=./src
 BINARIES=./build
-#LIBRARIES=./lib
+LIBRARIES=./lib
 TEST=./test
-#COMPILER=g++
-#COMPILER_FLAGS=-Wall -Werror -o2 -I $(INCLUDE) -L $(LIBRARIES)
+COMPILER=g++
+COMPILER_FLAGS=-Wall -Werror -o2 -I $(INCLUDE) -L $(LIBRARIES)
 ARCHIVER=ar
 
 all: format check build_lib make_report cleanup
