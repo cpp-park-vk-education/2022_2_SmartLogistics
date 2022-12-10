@@ -29,8 +29,8 @@ jobs:
       - name: publish_lib
         uses: actions/upload-artifact@v3
         with:
-          name: dbhelper.a
-          path: ./lib/dbhelper.a
+          name: logic.a
+          path: ./lib/logic.a
       - name: publish_coverage_report
         uses: actions/upload-artifact@v3
         with:

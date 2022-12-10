@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CODE_FILES="./src/*.cpp ./include/*.hpp ./test/*.cpp"
+CODE_FILES="./src/logic.cpp ./include/*.hpp ./test/*.cpp"
 
 set -e pipefail
 
