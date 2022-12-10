@@ -1,0 +1,8 @@
+/2022_2_SmartLogistics/MyPart_DataBase/build/CMakeFiles/rebuild_cache.dir
+/2022_2_SmartLogistics/MyPart_DataBase/build/CMakeFiles/edit_cache.dir
+/2022_2_SmartLogistics/MyPart_DataBase/build/CMakeFiles/test.dir
+/2022_2_SmartLogistics/MyPart_DataBase/build/CMakeFiles/SmartLogistics.dir
+/2022_2_SmartLogistics/MyPart_DataBase/build/test/CMakeFiles/rebuild_cache.dir
+/2022_2_SmartLogistics/MyPart_DataBase/build/test/CMakeFiles/edit_cache.dir
+/2022_2_SmartLogistics/MyPart_DataBase/build/test/CMakeFiles/test.dir
+/2022_2_SmartLogistics/MyPart_DataBase/build/test/CMakeFiles/testing.dir

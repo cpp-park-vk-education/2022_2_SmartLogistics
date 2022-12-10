@@ -1,0 +1,1 @@
+/usr/local/bin/c++ -Wall -Wpedantic -Werror CMakeFiles/SmartLogistics.dir/src/logic.cpp.o -o SmartLogistics  -lmysqlclient 

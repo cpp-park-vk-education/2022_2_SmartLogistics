@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/2022_2_SmartLogistics/MyPart_DataBase/src/logic.cpp
+string
+-
+vector
+-
+iostream
+-
+cstring
+-
+mysql/mysql.h
+-
+
