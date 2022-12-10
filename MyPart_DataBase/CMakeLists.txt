@@ -9,7 +9,7 @@ include_directories("libmysql.lib")
 
 set(CMAKE_CXX_FLAGS "-Wall -Wpedantic -Werror")
 
-file(GLOB SOURCE "./src/*.cpp")
+file(GLOB SOURCE "./src/logic.cpp")
 
 file(GLOB INCLUDE_DIRS "include")
 
