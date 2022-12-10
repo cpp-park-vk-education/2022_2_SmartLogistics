@@ -17,8 +17,8 @@ check:
 	bash $(SCRIPTS)/check.sh
 
 build_lib:
-	#$(COMPILER) $(COMPILER_FLAGS) -c $(SOURCES)/logic.cpp -o $(BINARIES)/logic.o
-	#$(ARCHIVER) -crv $(LIBRARIES)/logic.a $(BINARIES)/logic.o
+	$(COMPILER) $(COMPILER_FLAGS) -c $(SOURCES)/logic.cpp -o $(BINARIES)/logic.o
+	$(ARCHIVER) -crv $(LIBRARIES)/logic.a $(BINARIES)/logic.o
 	cd build && cmake ../CMakeLists.txt && cmake --build .
 
 
